@@ -63,14 +63,14 @@ function PLUGIN:PlayerPostThink(client)
 		char:SetData("hunger", char:GetData("hunger", PLUGIN.defaultMax) - 1)
 		notifyExactHunger(client)
 
-		client.nextCooldownHunger = time + 180 + (char:GetAttribute("hungerlifetime") or 0)
+		client.nextCooldownHunger = time + PLUGIN.hungerDecayRate + (char:GetAttribute("hungerlifetime") or 0)
 	end
 
 	if (client.nextCooldownThirst or 0) < time then
 		char:SetData("thirst", char:GetData("thirst", PLUGIN.defaultMax) - 1)
 		notifyExactThirst(client)
 
-		client.nextCooldownThirst = time + 120 + (char:GetAttribute("thirstlifetime") or 0)
+		client.nextCooldownThirst = time + PLUGIN.thirstDecayRate + (char:GetAttribute("thirstlifetime") or 0)
 	end
 
 	if (char:GetData("hunger") < 1) or (char:GetData("thirst") < 1) then
