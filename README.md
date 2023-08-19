@@ -3,7 +3,7 @@
 Utilizes [Helix](https://gethelix.co/), a community-made gamemode framework for [Garry's Mod](https://store.steampowered.com/app/4000/Garrys_Mod/).
 <br>
 <br>
-Adds a hunger and thirst system for the [Character class](https://docs.gethelix.co/classes/character/) within Helix. **Disclaimer: this is a data structure and therefore provides no graphics (HUD elements such as a hunger and thirst bar, etc)!** Use the commands below with a minimum of zero and a maximum of *defaultMax* for your own HUD element.
+Adds a hunger and thirst system for the [Character class](https://docs.gethelix.co/classes/character/) within Helix. **Disclaimer: this is a data structure and therefore provides no graphics (HUD elements such as a hunger and thirst bar, etc)!** Use the commands below with a minimum of zero and a maximum of *defaultMax* for your own graphics/HUD. You can also divide the return values of the functions below by *defaultMax* to get a percentage.
 <br>
 <br>
 Hunger and thirst decay by 1 every *hungerDecayRate* and *thirstDecayRate* seconds respectively, starting at *defaultMax*. These can all be changed, [here](https://github.com/OctraSource/ix-playerneeds/blob/main/playerneeds/sh_plugin.lua).
